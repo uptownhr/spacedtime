@@ -5,15 +5,15 @@ Remember the important things in life. Permenantly store informaiton in your bra
 
 ```
 1. yarn global add timespaced
-2. timespaced add -q "What is my mother's name?" -a "Some Ting Wong"
-3. timespaced recall
+2. timespaced add "What is my mother's name?" "Some Ting Wong"
+3. timespaced recall #todo
 ```
 
 ## Timespaced recall
 This will ask you the question. Traditional time spaced reptition apps, do not ask for input. It only asks if you were able to remember. 
 
 ```
-> timespaced recall
+> timespaced recall #todo
 What is my mother's name?
 
 yes or no?
