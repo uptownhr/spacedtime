@@ -25,7 +25,7 @@ function loadData () {
 }
 
 function createQNA (question, answer) {
-    const qna = {question, answer}
+    const qna = {question, answer, streak: 0}
         
     data.push(qna)
 
@@ -42,6 +42,7 @@ function getSingleQuestion () {
     const length = data.length
 
     return data.find(qna => {
+        if (qna.streak === undefined) qna.streak = 0
         if (!qna.askAgainTime) return true
         return moment(qna.askAgainTime) < moment()
     })
@@ -92,8 +93,11 @@ const main = function () {
             
             console.log('remembered', remembered, qna.streak)
             if (remembered === 'y') { 
+                console.log('y')
                 qna.streak++
+                console.log('streak', qna.streak)
                 const {number} = fibonacci.iterate(qna.streak)
+                console.log('iterating?')
                 const askAgainTime = moment().add(number, 'minute')
                 console.log('congrats, we are going to ask you again later', askAgainTime.fromNow())
                 qna.askAgainTime = askAgainTime
