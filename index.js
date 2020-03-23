@@ -91,7 +91,6 @@ const main = function () {
 
             const remembered = await promptly.choose('did you remember successfully? yes(y) or no(n)', ['y', 'n'])
 
-            console.log('remembered', remembered, qna.streak)
             if (remembered === 'y') {
                 qna.streak++
                 const { number } = fibonacci.iterate(qna.streak)
