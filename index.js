@@ -13,20 +13,20 @@ const timeSpacedConfigFilePath = homeDir + '/.timespaced'
 
 let data
 
-function saveData (data) {
+function saveData(data) {
     const json = JSON.stringify(data)
     fs.writeFileSync(timeSpacedConfigFilePath, json)
 }
 
-function loadData () {
+function loadData() {
     const json = fs.readFileSync(timeSpacedConfigFilePath)
 
     return JSON.parse(json)
 }
 
-function createQNA (question, answer) {
-    const qna = {question, answer, streak: 0}
-        
+function createQNA(question, answer) {
+    const qna = { question, answer, streak: 0 }
+
     data.push(qna)
 
     saveData(data)
@@ -36,9 +36,9 @@ function createQNA (question, answer) {
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+}
 
-function getSingleQuestion () {
+function getSingleQuestion() {
     const length = data.length
 
     return data.find(qna => {
@@ -71,8 +71,8 @@ const main = function () {
         .command('add <question> [answer]')
         .description('add a question and answer that you want to remember')
         .action((question, answer) => {
-            console.log('clone command called', question, answer);
             const qna = createQNA(question, answer)
+            console.log('added', qna)
         });
 
     program
@@ -82,25 +82,23 @@ const main = function () {
             const qna = getSingleQuestion()
 
             if (!qna) return console.log('no questions to be recalled at this time. Try again later.')
-            
+
             console.log(qna.question)
-            
+
             await promptly.prompt('Press any key to reveal the answer');
 
             console.log(qna.answer)
 
-            const remembered = await promptly.choose('did you remember successfully? yes(y) or no(n)', ['y','n'])
-            
+            const remembered = await promptly.choose('did you remember successfully? yes(y) or no(n)', ['y', 'n'])
+
             console.log('remembered', remembered, qna.streak)
-            if (remembered === 'y') { 
-                console.log('y')
+            if (remembered === 'y') {
                 qna.streak++
-                console.log('streak', qna.streak)
-                const {number} = fibonacci.iterate(qna.streak)
-                console.log('iterating?')
+                const { number } = fibonacci.iterate(qna.streak)
                 const askAgainTime = moment().add(number, 'minute')
-                console.log('congrats, we are going to ask you again later', askAgainTime.fromNow())
+
                 qna.askAgainTime = askAgainTime
+                console.log('congrats, we are going to ask you again later', askAgainTime.fromNow())
             } else {
                 console.log('sorry we will ask again sooner')
             }
@@ -110,6 +108,5 @@ const main = function () {
 
     program.parse(process.argv);
 }
-
 
 main()
