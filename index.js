@@ -9,17 +9,17 @@ const { program } = require('commander');
 const promptly = require('promptly')
 
 const homeDir = os.homedir()
-const timeSpacedConfigFilePath = homeDir + '/.timespaced'
+const spacedTimeConfigFilePath = homeDir + '/.spacedTime'
 
 let data
 
 function saveData(data) {
     const json = JSON.stringify(data)
-    fs.writeFileSync(timeSpacedConfigFilePath, json)
+    fs.writeFileSync(spacedTimeConfigFilePath, json)
 }
 
 function loadData() {
-    const json = fs.readFileSync(timeSpacedConfigFilePath)
+    const json = fs.readFileSync(spacedTimeConfigFilePath)
 
     return JSON.parse(json)
 }
@@ -50,13 +50,13 @@ function getSingleQuestion() {
 
 const init = function () {
     //check to see that our file exist
-    // filename is .timespaced in the user's home directory
-    const timeSpacedExists = fs.existsSync(timeSpacedConfigFilePath)
+    // filename is .spacedTime in the user's home directory
+    const spacedTimeExists = fs.existsSync(spacedTimeConfigFilePath)
 
-    if (!timeSpacedExists) {
-        console.log('timespacedconfig not found, creating ...')
+    if (!spacedTimeExists) {
+        console.log('spacedTimeconfig not found, creating ...')
         saveData([])
-        console.log('creating timespacedconfig done.')
+        console.log('creating spacedTimeconfig done.')
     }
 
     data = loadData()
