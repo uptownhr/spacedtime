@@ -99,7 +99,13 @@ const main = function () {
                 qna.askAgainTime = askAgainTime
                 console.log('congrats, we are going to ask you again later', askAgainTime.fromNow())
             } else {
-                console.log('sorry we will ask again sooner')
+                if (qna.streak > 1) qna.streak--
+                
+                const { number } = fibonacci.iterate(qna.streak)
+                const askAgainTime = moment().add(number, 'minute')
+
+                qna.askAgainTime = askAgainTime
+                console.log('sorry we will ask again sooner', askAgainTime.fromNow())
             }
 
             saveData(data)
