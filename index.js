@@ -68,7 +68,7 @@ const main = function () {
     program.version('0.0.1');
 
     program
-        .command('add <question> [answer]')
+        .command('add <question> <answer>')
         .description('add a question and answer that you want to remember')
         .action((question, answer) => {
             const qna = createQNA(question, answer)
@@ -100,7 +100,7 @@ const main = function () {
                 console.log('congrats, we are going to ask you again later', askAgainTime.fromNow())
             } else {
                 if (qna.streak > 1) qna.streak--
-                
+
                 const { number } = fibonacci.iterate(qna.streak)
                 const askAgainTime = moment().add(number, 'minute')
 
