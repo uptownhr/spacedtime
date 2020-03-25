@@ -4,7 +4,6 @@
     "commander": "^5.0.0",
     "fibonacci": "^1.6.7",
     "moment": "^2.24.0",
-    "nuxt": "^2.12.0",
     "promptly": "^3.0.3"
   },
   "version": "0.1.10",
