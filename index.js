@@ -25,7 +25,7 @@ function loadData() {
 }
 
 function createQNA(question, answer) {
-    const qna = { question, answer, streak: 0 }
+    const qna = { question, answer, streak: 1 }
 
     data.push(qna)
 
@@ -62,6 +62,17 @@ const init = function () {
     data = loadData()
 }
 
+const prompt = function (prompt) {
+    console.log(prompt)
+    return new Promise((resolve) => {
+        process.stdin.setRawMode(true);
+        process.stdin.resume();
+        //process.stdin.on('data', process.exit.bind(process, 0));
+        process.stdin.on('data', resolve);
+    })
+
+}
+
 const main = function () {
     init()
 
@@ -85,7 +96,7 @@ const main = function () {
 
             console.log(qna.question)
 
-            await promptly.prompt('Press any key to reveal the answer');
+            await prompt('Press any key to reveal the answer')
 
             console.log(qna.answer)
 
@@ -100,6 +111,7 @@ const main = function () {
                 console.log('congrats, we are going to ask you again later', askAgainTime.fromNow())
             } else {
                 if (qna.streak > 1) qna.streak--
+                if (qna.streak === 0) qna.streak = 1
 
                 const { number } = fibonacci.iterate(qna.streak)
                 const askAgainTime = moment().add(number, 'minute')
