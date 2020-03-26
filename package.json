@@ -6,7 +6,7 @@
     "moment": "^2.24.0",
     "promptly": "^3.0.3"
   },
-  "version": "0.1.12",
+  "version": "0.1.13",
   "bin": {
     "spacedtime": "./index.js"
   }
