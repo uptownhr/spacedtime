@@ -9,5 +9,11 @@
   "version": "0.1.13",
   "bin": {
     "spacedtime": "./index.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^25.2.3"
   }
 }
