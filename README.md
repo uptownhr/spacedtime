@@ -27,3 +27,7 @@ congrats, we are going to ask you again later in 60 minutes
 ```
 
 Given how frequently you answer yes, the question will be asked less over time. If you answer no, you'll be asked this question more frequently.
+
+
+## Youtube Video Learning Series
+This project from start to finish has been documented through a serious of youtube videos. They can be found on my channel [YoshiMoshi](https://www.youtube.com/channel/UCH1m4a3Kud_lx3eRlaZts5Q?view_as=subscriber)
