@@ -1,5 +1,8 @@
 {
   "name": "spacedtime",
+  "homepage": "https://www.spacedtime.com",
+  "url": "https://github.com/uptownhr/spacedtime",
+  "license" : "MIT",
   "dependencies": {
     "chalk": "^3.0.0",
     "commander": "^5.0.0",
