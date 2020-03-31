@@ -1,24 +1,25 @@
 const spacedTime = require('./lib/SpacedTime')
 const { prompt } = require('./lib/utils')
 const promptly = require('promptly')
+const chalk = require('chalk')
 
 exports.recall = async function () {
     const qna = spacedTime.getSingleQuestion()
 
-    if (!qna) return console.log('no questions to be recalled at this time. Try again later.')
+    if (!qna) return console.log( chalk.yellow('No questions to be recalled at this time. Try again later.'), '\n')
 
-    console.log(qna.question)
+    console.log( chalk.bold(qna.question, '\n') )
 
-    await prompt('Press any key to reveal the answer')
+    await prompt( chalk.yellow('Press any key to reveal the answer', '\n'))
 
-    console.log(qna.answer)
+    console.log( chalk.bold(qna.answer, '\n') )
 
-    const remembered = await promptly.choose('did you remember successfully? yes(y) or no(n)', ['y', 'n'])
+    const remembered = await promptly.choose( chalk.yellow('Did you remember successfully? yes(y) or no(n)'), ['y', 'n'])
 
     spacedTime.recallAnswer(qna, remembered === 'y')
 }
 
 exports.add = async function (question, answer) {
     const qna = spacedTime.createQNA(question, answer)
-    console.log('added', qna)
+    console.log( chalk.yellow('added'), chalk.yellow(qna.question) )
 }
