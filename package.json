@@ -1,12 +1,13 @@
 {
   "name": "spacedtime",
   "dependencies": {
+    "chalk": "^3.0.0",
     "commander": "^5.0.0",
     "fibonacci": "^1.6.7",
     "moment": "^2.24.0",
     "promptly": "^3.0.3"
   },
-  "version": "0.1.16",
+  "version": "0.1.17",
   "bin": {
     "spacedtime": "./index.js"
   },
