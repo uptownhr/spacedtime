@@ -2,7 +2,7 @@
   "name": "spacedtime",
   "homepage": "https://www.spacedtime.com",
   "url": "https://github.com/uptownhr/spacedtime",
-  "license" : "MIT",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^3.0.0",
     "commander": "^5.0.0",
@@ -10,7 +10,7 @@
     "moment": "^2.24.0",
     "promptly": "^3.0.3"
   },
-  "version": "0.1.17",
+  "version": "0.1.18",
   "bin": {
     "spacedtime": "./index.js"
   },
