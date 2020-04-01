@@ -1,6 +1,8 @@
 # SpacedTime
 Remember the important things in life. Permenantly store informaiton in your brain, not the cloud. Using spaced time repition techniques, we will create an app that allows you to easily recall and memorize. 
 
+![SpacedTime Image](https://github.com/uptownhr/spacedtime/master/spacedtime-terminal.gif)
+
 ## How to get started
 
 ```
