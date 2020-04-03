@@ -1,7 +1,13 @@
-const spacedTime = require('../lib/SpacedTime');
+const SpacedTime = require('../lib/SpacedTime');
+const os = require('os')
+const configurationFilePath = os.tmpdir() + '/spacedtime-test.json'
 
 describe('SpacedTime class', () => {
-
+    let spacedTime
+    beforeAll(() => {
+        spacedTime = new SpacedTime(configurationFilePath)
+        console.log('path', configurationFilePath)
+    })
     test ('it contains data array', () => {
         expect(Array.isArray(spacedTime.data)).toBeTruthy()
     })
@@ -42,5 +48,40 @@ describe('SpacedTime class', () => {
         expect(q.streak).toBe(1)
     })
 
-    
+    test('list will return questions in the database', () => {
+        const list = spacedTime.list()
+
+        expect(list.length).toBe(1)
+    })
+
+    test('delete will remove a question by index from the database', () => {
+        spacedTime.createQNA(2, 2)
+
+        spacedTime.remove(0)
+
+        expect(spacedTime.data.length).toBe(1)
+    })
+
+    test('update(index, {question}) will update just the question', () => {
+        const question = "this is updated"
+        spacedTime.update(0, {question})
+
+        expect(spacedTime.data[0].question).toBe(question)
+    })
+
+    test('update(index, {answer}) will update just the answer', () => {
+        const answer = "this is updated"
+        spacedTime.update(0, {answer})
+
+        expect(spacedTime.data[0].answer).toBe(answer)
+    })
+
+    test('update(index, {answer, question}) will update both the question & answer', () => {
+        const answer = "updated again"
+        const question = "updated again"
+        spacedTime.update(0, {answer, question})
+
+        expect(spacedTime.data[0].answer).toBe(answer)
+        expect(spacedTime.data[0].question).toBe(question)
+    })
 })
