@@ -1,0 +1,277 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/james/Opensource/spacedtime
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 80
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 25
+    content: s
+  - delay: 25
+    content: p
+  - delay: 25
+    content: a
+  - delay: 25
+    content: c
+  - delay: 25
+    content: e
+  - delay: 25
+    content: d
+  - delay: 25
+    content: t
+  - delay: 25
+    content: i
+  - delay: 25
+    content: m
+  - delay: 25
+    content: e
+  - delay: 25
+    content: "\r\n"
+  - delay: 25
+    content: "Usage: spacedtime [options] [command]\r\n\r\nOptions:\r\n  -V, --version             output the version number\r\n  -h, --help                display help for command\r\n\r\nCommands:\r\n  add <question> <answer>   add a question and answer that you want to\r\n                            remember\r\n  recall                    will display a question for you to recall\r\n  list                      will show a table of the database\r\n  remove <index>            removes a question by the question index\r\n  update [options] <index>  updates the question and/or answer\r\n  help [command]            display help for command\r\n"
+  - delay: 5
+    content: "\e]7;file://Jamess-MacBook-Pro.local/Users/james/Opensource/spacedtime\aJamess-MacBook-Pro:spacedtime james$ "
+  - delay: 25
+    content: spacedtime
+  - delay: 25
+    content: ' '
+  - delay: 25
+    content: a
+  - delay: 25
+    content: d
+  - delay: 25
+    content: d
+  - delay: 25
+    content: ' '
+  - delay: 25
+    content: '"'
+  - delay: 25
+    content: W
+  - delay: 25
+    content: h
+  - delay: 25
+    content: e
+  - delay: 25
+    content: 'n'
+  - delay: 25
+    content: ' '
+  - delay: 25
+    content: i
+  - delay: 25
+    content: s
+  - delay: 25
+    content: ' '
+  - delay: 25
+    content: m
+  - delay: 25
+    content: 'y'
+  - delay: 25
+    content: ' '
+  - delay: 25
+    content: a
+  - delay: 25
+    content: 'n'
+  - delay: 25
+    content: 'n'
+  - delay: 25
+    content: i
+  - delay: 25
+    content: v
+  - delay: 25
+    content: e
+  - delay: 72
+    content: r
+  - delay: 464
+    content: s
+  - delay: 162
+    content: a
+  - delay: 62
+    content: r
+  - delay: 93
+    content: 'y'
+  - delay: 220
+    content: '?'
+  - delay: 224
+    content: '"'
+  - delay: 1185
+    content: ' '
+  - delay: 167
+    content: '"'
+  - delay: 1560
+    content: "2 \r"
+  - delay: 71
+    content: '0'
+  - delay: 125
+    content: '2'
+  - delay: 93
+    content: '0'
+  - delay: 599
+    content: '-'
+  - delay: 385
+    content: '0'
+  - delay: 65
+    content: '1'
+  - delay: 237
+    content: '-'
+  - delay: 209
+    content: '0'
+  - delay: 89
+    content: '1'
+  - delay: 310
+    content: '"'
+  - delay: 725
+    content: "\r\n"
+  - delay: 88
+    content: "\e[33madded\e[39m \e[33mWhen is my anniversary?\e[39m\r\n"
+  - delay: 7
+    content: "\e]7;file://Jamess-MacBook-Pro.local/Users/james/Opensource/spacedtime\aJamess-MacBook-Pro:spacedtime james$ "
+  - delay: 1652
+    content: s
+  - delay: 121
+    content: p
+  - delay: 23
+    content: a
+  - delay: 121
+    content: c
+  - delay: 64
+    content: e
+  - delay: 186
+    content: d
+  - delay: 168
+    content: t
+  - delay: 104
+    content: i
+  - delay: 37
+    content: m
+  - delay: 49
+    content: e
+  - delay: 104
+    content: ' '
+  - delay: 105
+    content: r
+  - delay: 70
+    content: e
+  - delay: 179
+    content: c
+  - delay: 31
+    content: a
+  - delay: 70
+    content: l
+  - delay: 160
+    content: l
+  - delay: 1015
+    content: "\r\n"
+  - delay: 89
+    content: "\e[1mwhat is my daughters birthday \e[22m\r\n\e[1m\e[22m\r\n\e[33mPress any key to reveal the answer \e[39m\r\n\e[33m\e[39m\r\n"
+  - delay: 1343
+    content: "\e[1m7/1/2017 \e[22m\r\n\e[1m\e[22m\r\n\e[1G\e[0J\e[33mDid you remember successfully? yes(y) or no(n)\e[39m \e[48G"
+  - delay: 100
+    content: 'y'
+  - delay: 222
+    content: "\r\r\n"
