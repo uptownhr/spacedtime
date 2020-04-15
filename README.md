@@ -1,5 +1,5 @@
 # SpacedTime
-Remember the important things in life. Permenantly store informaiton in your brain, not the cloud. Using spaced time repition techniques, we will create an app that allows you to easily recall and memorize. 
+Remember the important things in life. Permenantly store informaiton in your brain, not the cloud. Using spaced time repetition techniques, we will create an app that allows you to easily recall and memorize. 
 
 ![SpacedTime Image](https://github.com/uptownhr/spacedtime/blob/master/static/spacedtime-terminal.gif)
 
@@ -12,7 +12,7 @@ Remember the important things in life. Permenantly store informaiton in your bra
 ```
 
 ## SpacedTime recall
-This will ask you the question. Traditional time spaced reptition apps do not ask you input your answer. It only asks if you were able to remember. 
+This will ask you the question. Traditional time spaced repetition apps do not ask you input your answer. It only asks if you were able to remember. 
 
 ```
 > spacedtime recall
