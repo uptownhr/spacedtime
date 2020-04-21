@@ -1,5 +1,5 @@
 # SpacedTime
-Remember the important things in life. Permenantly store informaiton in your brain, not the cloud. Using spaced time repetition techniques, we will create an app that allows you to easily recall and memorize. 
+Remember the important things in life. Permanently store information in your brain, not the cloud. Using spaced time repetition techniques, we will create an app that allows you to easily recall and memorize. 
 
 ![SpacedTime Image](https://github.com/uptownhr/spacedtime/blob/master/static/spacedtime-terminal.gif)
 
@@ -32,4 +32,4 @@ Given how frequently you answer yes, the question will be asked less over time. 
 
 
 ## Youtube Video Learning Series
-This project from start to finish has been documented through a serious of youtube videos. They can be found on my channel [YoshiMoshi](https://www.youtube.com/channel/UCH1m4a3Kud_lx3eRlaZts5Q?view_as=subscriber)
+This project from start to finish has been documented through a series of youtube videos. They can be found on my channel [YoshiMoshi](https://www.youtube.com/channel/UCH1m4a3Kud_lx3eRlaZts5Q?view_as=subscriber)
