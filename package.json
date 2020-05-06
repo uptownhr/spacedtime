@@ -14,7 +14,7 @@
     "moment": "^2.24.0",
     "promptly": "^3.0.3"
   },
-  "version": "0.1.20",
+  "version": "0.1.21",
   "bin": {
     "spacedtime": "./index.js"
   },
