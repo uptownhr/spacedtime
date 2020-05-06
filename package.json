@@ -1,10 +1,10 @@
 {
   "name": "spacedtime",
   "homepage": "https://www.spacedtime.com",
-  "url": "https://github.com/uptownhr/spacedtime",
+  "url": "https://github.com/nobrainerlabs/spacedtime",
   "repository": {
     "type": "git",
-    "url": "http://github.com/uptownhr/spacedtime"
+    "url": "http://github.com/nobrainerlabs/spacedtime"
   },
   "license": "MIT",
   "dependencies": {
